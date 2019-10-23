@@ -1,0 +1,10 @@
+[Inputs]
+CLK
+RST
+=Input[3:0]=
+[Outputs]
+OUT
+[BiDir]
+[ATTRIBUTES]
+VeriModel PWM
+

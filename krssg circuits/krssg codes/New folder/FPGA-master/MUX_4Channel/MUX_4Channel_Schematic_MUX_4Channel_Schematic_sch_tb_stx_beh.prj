@@ -1,0 +1,3 @@
+verilog isim_temp "MUX_4Channel_Schematic.vf"
+verilog isim_temp "Simulation_MUX.v"
+verilog isim_temp "E:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

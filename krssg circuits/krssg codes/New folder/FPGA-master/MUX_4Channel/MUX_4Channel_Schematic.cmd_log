@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/Xilinx/Projects/MUX_4Channel/MUX_4Channel_Schematic.xst" -ofn "E:/Xilinx/Projects/MUX_4Channel/MUX_4Channel_Schematic.syr" 

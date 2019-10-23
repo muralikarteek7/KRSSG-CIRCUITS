@@ -1,0 +1,35 @@
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Package/Motor_Package.xst" -ofn "E:/Xilinx/Projects/Motor_Package/Motor_Package.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Package/Motor_Package.xst" -ofn "E:/Xilinx/Projects/Motor_Package/Motor_Package.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Package/Motor_Package.xst" -ofn "E:/Xilinx/Projects/Motor_Package/Motor_Package.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Package/Motor_Package.xst" -ofn "E:/Xilinx/Projects/Motor_Package/Motor_Package.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Package.ngc Motor_Package.ngd  
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Package/Motor_Package.xst" -ofn "E:/Xilinx/Projects/Motor_Package/Motor_Package.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Package.ngc Motor_Package.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Package.ngc Motor_Package.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Package_map.ncd Motor_Package.ngd Motor_Package.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Package.ngc Motor_Package.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Package_map.ncd Motor_Package.ngd Motor_Package.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Package_map.ncd Motor_Package.ncd Motor_Package.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Package.twx Motor_Package.ncd -o Motor_Package.twr Motor_Package.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Package.ut Motor_Package.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Package/Motor_Package.xst" -ofn "E:/Xilinx/Projects/Motor_Package/Motor_Package.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Package.ngc Motor_Package.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Package_map.ncd Motor_Package.ngd Motor_Package.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Package_map.ncd Motor_Package.ncd Motor_Package.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Package.twx Motor_Package.ncd -o Motor_Package.twr Motor_Package.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Package.ut Motor_Package.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Package/Motor_Package.xst" -ofn "E:/Xilinx/Projects/Motor_Package/Motor_Package.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Package/Motor_Package.xst" -ofn "E:/Xilinx/Projects/Motor_Package/Motor_Package.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Package.ngc Motor_Package.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Package_map.ncd Motor_Package.ngd Motor_Package.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Package_map.ncd Motor_Package.ncd Motor_Package.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Package.twx Motor_Package.ncd -o Motor_Package.twr Motor_Package.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Package.ut Motor_Package.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Package/Motor_Package.xst" -ofn "E:/Xilinx/Projects/Motor_Package/Motor_Package.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Package/Motor_Package.xst" -ofn "E:/Xilinx/Projects/Motor_Package/Motor_Package.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Package/Motor_Package.xst" -ofn "E:/Xilinx/Projects/Motor_Package/Motor_Package.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Package.ngc Motor_Package.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Package_map.ncd Motor_Package.ngd Motor_Package.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Package_map.ncd Motor_Package.ncd Motor_Package.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Package.twx Motor_Package.ncd -o Motor_Package.twr Motor_Package.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Package.ut Motor_Package.ncd 

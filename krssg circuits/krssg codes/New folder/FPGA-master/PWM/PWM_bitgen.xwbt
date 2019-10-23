@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\Xilinx\Projects\PWM\PWM.ncd
+OUTFILE=E:\Xilinx\Projects\PWM\PWM.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=E:\Xilinx\Projects\PWM
+LICENSE=WebPack
+USER_INFO=__0_0_0

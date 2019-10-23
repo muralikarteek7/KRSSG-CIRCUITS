@@ -1,0 +1,91 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+E:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml Motor_PWM.twx Motor_PWM.ncd -o Motor_PWM.twr Motor_PWM.pcf
+-ucf UCF_MIMAS.ucf
+
+Design file:              Motor_PWM.ncd
+Physical constraint file: Motor_PWM.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    2.790(R)|      SLOW  |   -1.013(R)|      SLOW  |CLK_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    3.077|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+H<0>           |A<0>           |    9.205|
+H<0>           |A<1>           |    9.566|
+H<0>           |B<0>           |    9.536|
+H<0>           |C<0>           |    9.593|
+H<0>           |C<1>           |    9.480|
+H<1>           |A<0>           |    8.412|
+H<1>           |A<1>           |    8.605|
+H<1>           |B<0>           |    8.743|
+H<1>           |B<1>           |    8.817|
+H<1>           |C<0>           |    9.050|
+H<2>           |A<0>           |    8.642|
+H<2>           |B<0>           |    8.973|
+H<2>           |B<1>           |    8.753|
+H<2>           |C<0>           |    9.120|
+H<2>           |C<1>           |    9.007|
+Input<0>       |PWM_In<0>      |   11.273|
+Input<1>       |PWM_In<1>      |   10.530|
+Input<2>       |PWM_In<2>      |   10.487|
+Input<3>       |PWM_In<3>      |   10.553|
+Input<4>       |PWM_In<4>      |   10.149|
+Input<5>       |PWM_In<5>      |    9.905|
+Input<6>       |PWM_In<6>      |   10.529|
+Input<7>       |PWM_In<7>      |    9.734|
+---------------+---------------+---------+
+
+
+Analysis completed Fri Aug 10 21:56:39 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 201 MB
+
+
+

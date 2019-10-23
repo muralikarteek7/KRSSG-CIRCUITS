@@ -1,0 +1,28 @@
+Command line:
+   Test_Motor_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56318
+
+Mon May 14 23:04:28 2018
+
+
+ Elaboration Time: 0.65625 sec
+
+ Current Memory Usage: 1567.67 Meg
+
+ Total Signals          : 20
+ Total Nets             : 22
+ Total Signal Drivers   : 12
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 15
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 105
+
+ Total Simulation Time: 0.65625 sec
+
+ Current Memory Usage: 937.476 Meg
+
+Mon May 14 23:08:12 2018
+

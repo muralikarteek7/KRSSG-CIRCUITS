@@ -1,0 +1,28 @@
+Command line:
+   Test_isim_par.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51799
+
+Sat May 19 00:30:49 2018
+
+
+ Elaboration Time: 0.703125 sec
+
+ Current Memory Usage: 1568.03 Meg
+
+ Total Signals          : 528
+ Total Nets             : 329
+ Total Signal Drivers   : 332
+ Total Blocks           : 106
+ Total Primitive Blocks : 82
+ Total Processes        : 404
+ Total Traceable Variables  : 252
+ Total Scalar Nets and Variables : 7613
+
+ Total Simulation Time: 23.0313 sec
+
+ Current Memory Usage: 1095.38 Meg
+
+Sat May 19 00:38:39 2018
+

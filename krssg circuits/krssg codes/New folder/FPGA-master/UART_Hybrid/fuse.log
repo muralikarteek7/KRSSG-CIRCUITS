@@ -1,0 +1,39 @@
+Running: E:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib simprims_ver -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/Xilinx/Projects/UART_Hybrid/Test_isim_par.exe -prj E:/Xilinx/Projects/UART_Hybrid/Test_par.prj work.Test work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/Xilinx/Projects/UART_Hybrid/netgen/par/UART_timesim.v" into library work
+Analyzing Verilog file "E:/Xilinx/Projects/UART_Hybrid/Test.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 196032 KB
+Fuse CPU Usage: 718 ms
+Compiling module X_BUF
+Compiling module X_LUT6(INIT=64'b1100110011001100...
+Compiling module X_LUT5
+Compiling module X_ZERO
+Compiling module X_CARRY4
+Compiling module X_OPAD
+Compiling module X_OBUF
+Compiling module X_IPAD
+Compiling module X_PU
+Compiling module sffsrce
+Compiling module X_SFF
+Compiling module X_CKBUF
+Compiling module mux
+Compiling module X_MUX2
+Compiling module ffsrce
+Compiling module X_FF
+Compiling module X_SRLC16E
+Compiling module X_FF(INIT=1'b1)
+Compiling module X_ONE
+Compiling module UART
+Compiling module Test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 6 sub-compilation(s) to finish...
+Compiled 170 Verilog Units
+Built simulation executable E:/Xilinx/Projects/UART_Hybrid/Test_isim_par.exe
+Fuse Memory Usage: 206376 KB
+Fuse CPU Usage: 1984 ms

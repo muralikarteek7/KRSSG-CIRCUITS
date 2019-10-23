@@ -1,0 +1,668 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> Reading design: Encoder_UART.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Encoder_UART.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Encoder_UART"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : Encoder_UART
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\Xilinx\Projects\Clock_Divider\Clock_Divider.v" into library work
+Parsing module <Clock_Divider>.
+Analyzing Verilog file "E:\Xilinx\Projects\UART_Transmitter\UART_Transmiter.v" into library work
+Parsing module <UART_Transmiter>.
+Analyzing Verilog file "E:\Xilinx\Projects\Encoder\Encoder.v" into library work
+Parsing module <Encoder>.
+Analyzing Verilog file "E:\Xilinx\Projects\Encoder_UART\Encoder_UART.v" into library work
+Parsing module <Encoder_UART>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Encoder_UART>.
+
+Elaborating module <Encoder>.
+WARNING:HDLCompiler:872 - "E:\Xilinx\Projects\Encoder\Encoder.v" Line 25: Using initial value of cd since it is never assigned
+
+Elaborating module <Clock_Divider>.
+WARNING:HDLCompiler:413 - "E:\Xilinx\Projects\Clock_Divider\Clock_Divider.v" Line 19: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\Xilinx\Projects\Encoder\Encoder.v" Line 46: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\Xilinx\Projects\Encoder\Encoder.v" Line 54: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <UART_Transmiter>.
+WARNING:HDLCompiler:872 - "E:\Xilinx\Projects\UART_Transmitter\UART_Transmiter.v" Line 23: Using initial value of IN since it is never assigned
+WARNING:HDLCompiler:189 - "E:\Xilinx\Projects\UART_Transmitter\UART_Transmiter.v" Line 26: Size mismatch in connection of port <IN>. Formal port size is 16-bit while actual signal size is 9-bit.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Encoder_UART>.
+    Related source file is "E:\Xilinx\Projects\Encoder_UART\Encoder_UART.v".
+    Summary:
+	no macro.
+Unit <Encoder_UART> synthesized.
+
+Synthesizing Unit <Encoder>.
+    Related source file is "E:\Xilinx\Projects\Encoder\Encoder.v".
+    Found 8-bit register for signal <Out_reg>.
+    Found 8-bit register for signal <Clock_Cntr>.
+    Found 1-bit register for signal <en>.
+    Found 8-bit register for signal <Count_val>.
+    Found 8-bit adder for signal <Clock_Cntr[7]_GND_2_o_add_1_OUT> created at line 46.
+    Found 8-bit adder for signal <Count_val[7]_GND_2_o_add_6_OUT> created at line 54.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Encoder> synthesized.
+
+Synthesizing Unit <Clock_Divider>.
+    Related source file is "E:\Xilinx\Projects\Clock_Divider\Clock_Divider.v".
+    Found 1-bit register for signal <OUT>.
+    Found 16-bit register for signal <Counter>.
+    Found 16-bit adder for signal <Counter[15]_GND_3_o_add_0_OUT> created at line 19.
+    Found 16-bit comparator equal for signal <Counter[15]_IN[15]_equal_2_o> created at line 20
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <Clock_Divider> synthesized.
+
+Synthesizing Unit <UART_Transmiter>.
+    Related source file is "E:\Xilinx\Projects\UART_Transmitter\UART_Transmiter.v".
+    Found 1-bit register for signal <TX_register>.
+    Found 4-bit register for signal <Count>.
+    Found 4-bit adder for signal <Count[3]_GND_4_o_add_8_OUT> created at line 46.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   5 D-type flip-flop(s).
+	inferred  11 Multiplexer(s).
+Unit <UART_Transmiter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 2
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 2
+# Registers                                            : 10
+ 1-bit register                                        : 4
+ 16-bit register                                       : 2
+ 4-bit register                                        : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 2
+ 16-bit comparator equal                               : 2
+# Multiplexers                                         : 14
+ 1-bit 2-to-1 multiplexer                              : 9
+ 16-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Clock_Divider>.
+The following registers are absorbed into counter <Counter>: 1 register on signal <Counter>.
+Unit <Clock_Divider> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Encoder>.
+The following registers are absorbed into counter <Clock_Cntr>: 1 register on signal <Clock_Cntr>.
+The following registers are absorbed into counter <Count_val>: 1 register on signal <Count_val>.
+Unit <Encoder> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 4
+ 16-bit up counter                                     : 2
+ 8-bit up counter                                      : 2
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+# Comparators                                          : 2
+ 16-bit comparator equal                               : 2
+# Multiplexers                                         : 11
+ 1-bit 2-to-1 multiplexer                              : 9
+ 4-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Encoder_UART> ...
+
+Optimizing unit <Encoder> ...
+
+Optimizing unit <UART_Transmiter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Encoder_UART, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Encoder_UART.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 185
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 17
+#      LUT2                        : 6
+#      LUT3                        : 11
+#      LUT4                        : 4
+#      LUT5                        : 1
+#      LUT6                        : 49
+#      MUXCY                       : 44
+#      VCC                         : 1
+#      XORCY                       : 48
+# FlipFlops/Latches                : 64
+#      FDC                         : 50
+#      FDCE                        : 12
+#      FDE                         : 1
+#      FDPE                        : 1
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 11
+#      IBUF                        : 1
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              64  out of  11440     0%  
+ Number of Slice LUTs:                   91  out of   5720     1%  
+    Number used as Logic:                91  out of   5720     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     91
+   Number with an unused Flip Flop:      27  out of     91    29%  
+   Number with an unused LUT:             0  out of     91     0%  
+   Number of fully used LUT-FF pairs:    64  out of     91    70%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    102    12%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)           | Load  |
+-----------------------------------+---------------------------------+-------+
+CLK                                | BUFGP                           | 34    |
+E                                  | BUFGP                           | 8     |
+Motor_Encoder/CD/OUT               | NONE(Motor_Encoder/Clock_Cntr_7)| 17    |
+Comm/CD1/OUT                       | NONE(Comm/TX_register)          | 5     |
+-----------------------------------+---------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.089ns (Maximum Frequency: 244.561MHz)
+   Minimum input arrival time before clock: 4.253ns
+   Maximum output required time after clock: 3.701ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 4.089ns (frequency: 244.561MHz)
+  Total number of paths / destination ports: 4081 / 34
+-------------------------------------------------------------------------
+Delay:               4.089ns (Levels of Logic = 18)
+  Source:            Motor_Encoder/CD/Counter_2 (FF)
+  Destination:       Motor_Encoder/CD/Counter_15 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: Motor_Encoder/CD/Counter_2 to Motor_Encoder/CD/Counter_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.981  Motor_Encoder/CD/Counter_2 (Motor_Encoder/CD/Counter_2)
+     LUT6:I0->O           16   0.203   1.109  Motor_Encoder/CD/Counter[15]_IN[15]_equal_2_o4_SW0 (N4)
+     LUT6:I4->O            1   0.203   0.579  Motor_Encoder/CD/Counter[15]_IN[15]_equal_2_o_inv1 (Motor_Encoder/CD/Counter[15]_IN[15]_equal_2_o_inv)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<0> (Motor_Encoder/CD/Mcount_Counter_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<1> (Motor_Encoder/CD/Mcount_Counter_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<2> (Motor_Encoder/CD/Mcount_Counter_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<3> (Motor_Encoder/CD/Mcount_Counter_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<4> (Motor_Encoder/CD/Mcount_Counter_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<5> (Motor_Encoder/CD/Mcount_Counter_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<6> (Motor_Encoder/CD/Mcount_Counter_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<7> (Motor_Encoder/CD/Mcount_Counter_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<8> (Motor_Encoder/CD/Mcount_Counter_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<9> (Motor_Encoder/CD/Mcount_Counter_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<10> (Motor_Encoder/CD/Mcount_Counter_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<11> (Motor_Encoder/CD/Mcount_Counter_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<12> (Motor_Encoder/CD/Mcount_Counter_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<13> (Motor_Encoder/CD/Mcount_Counter_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  Motor_Encoder/CD/Mcount_Counter_cy<14> (Motor_Encoder/CD/Mcount_Counter_cy<14>)
+     XORCY:CI->O           1   0.180   0.000  Motor_Encoder/CD/Mcount_Counter_xor<15> (Motor_Encoder/CD/Mcount_Counter15)
+     FDC:D                     0.102          Motor_Encoder/CD/Counter_15
+    ----------------------------------------
+    Total                      4.089ns (1.420ns logic, 2.669ns route)
+                                       (34.7% logic, 65.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'E'
+  Clock period: 1.837ns (frequency: 544.292MHz)
+  Total number of paths / destination ports: 36 / 8
+-------------------------------------------------------------------------
+Delay:               1.837ns (Levels of Logic = 9)
+  Source:            Motor_Encoder/Count_val_0 (FF)
+  Destination:       Motor_Encoder/Count_val_7 (FF)
+  Source Clock:      E rising
+  Destination Clock: E rising
+
+  Data Path: Motor_Encoder/Count_val_0 to Motor_Encoder/Count_val_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.616  Motor_Encoder/Count_val_0 (Motor_Encoder/Count_val_0)
+     INV:I->O              1   0.206   0.000  Motor_Encoder/Mcount_Count_val_lut<0>_INV_0 (Motor_Encoder/Mcount_Count_val_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Motor_Encoder/Mcount_Count_val_cy<0> (Motor_Encoder/Mcount_Count_val_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/Mcount_Count_val_cy<1> (Motor_Encoder/Mcount_Count_val_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/Mcount_Count_val_cy<2> (Motor_Encoder/Mcount_Count_val_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/Mcount_Count_val_cy<3> (Motor_Encoder/Mcount_Count_val_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/Mcount_Count_val_cy<4> (Motor_Encoder/Mcount_Count_val_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/Mcount_Count_val_cy<5> (Motor_Encoder/Mcount_Count_val_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  Motor_Encoder/Mcount_Count_val_cy<6> (Motor_Encoder/Mcount_Count_val_cy<6>)
+     XORCY:CI->O           1   0.180   0.000  Motor_Encoder/Mcount_Count_val_xor<7> (Motor_Encoder/Result<7>)
+     FDC:D                     0.102          Motor_Encoder/Count_val_7
+    ----------------------------------------
+    Total                      1.837ns (1.221ns logic, 0.616ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Motor_Encoder/CD/OUT'
+  Clock period: 3.654ns (frequency: 273.658MHz)
+  Total number of paths / destination ports: 349 / 25
+-------------------------------------------------------------------------
+Delay:               3.654ns (Levels of Logic = 10)
+  Source:            Motor_Encoder/Clock_Cntr_7 (FF)
+  Destination:       Motor_Encoder/Clock_Cntr_7 (FF)
+  Source Clock:      Motor_Encoder/CD/OUT rising
+  Destination Clock: Motor_Encoder/CD/OUT rising
+
+  Data Path: Motor_Encoder/Clock_Cntr_7 to Motor_Encoder/Clock_Cntr_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.845  Motor_Encoder/Clock_Cntr_7 (Motor_Encoder/Clock_Cntr_7)
+     LUT3:I0->O           14   0.205   0.958  Motor_Encoder/GND_2_o_GND_2_o_equal_1_o<7>_SW0 (N2)
+     LUT6:I5->O            1   0.205   0.579  Motor_Encoder/GND_2_o_GND_2_o_equal_1_o_inv1 (Motor_Encoder/GND_2_o_GND_2_o_equal_1_o_inv)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/Mcount_Clock_Cntr_cy<0> (Motor_Encoder/Mcount_Clock_Cntr_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/Mcount_Clock_Cntr_cy<1> (Motor_Encoder/Mcount_Clock_Cntr_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/Mcount_Clock_Cntr_cy<2> (Motor_Encoder/Mcount_Clock_Cntr_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/Mcount_Clock_Cntr_cy<3> (Motor_Encoder/Mcount_Clock_Cntr_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/Mcount_Clock_Cntr_cy<4> (Motor_Encoder/Mcount_Clock_Cntr_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Motor_Encoder/Mcount_Clock_Cntr_cy<5> (Motor_Encoder/Mcount_Clock_Cntr_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  Motor_Encoder/Mcount_Clock_Cntr_cy<6> (Motor_Encoder/Mcount_Clock_Cntr_cy<6>)
+     XORCY:CI->O           1   0.180   0.000  Motor_Encoder/Mcount_Clock_Cntr_xor<7> (Motor_Encoder/Mcount_Clock_Cntr7)
+     FDC:D                     0.102          Motor_Encoder/Clock_Cntr_7
+    ----------------------------------------
+    Total                      3.654ns (1.272ns logic, 2.382ns route)
+                                       (34.8% logic, 65.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Comm/CD1/OUT'
+  Clock period: 2.803ns (frequency: 356.824MHz)
+  Total number of paths / destination ports: 35 / 10
+-------------------------------------------------------------------------
+Delay:               2.803ns (Levels of Logic = 2)
+  Source:            Comm/Count_1 (FF)
+  Destination:       Comm/TX_register (FF)
+  Source Clock:      Comm/CD1/OUT rising
+  Destination Clock: Comm/CD1/OUT rising
+
+  Data Path: Comm/Count_1 to Comm/TX_register
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.447   1.021  Comm/Count_1 (Comm/Count_1)
+     LUT4:I0->O            1   0.203   0.827  Comm/Mmux_Count[3]_TX_register_Mux_9_o23 (Comm/Mmux_Count[3]_TX_register_Mux_9_o22)
+     LUT6:I2->O            1   0.203   0.000  Comm/Mmux_Count[3]_TX_register_Mux_9_o24 (Comm/Count[3]_TX_register_Mux_9_o)
+     FDPE:D                    0.102          Comm/TX_register
+    ----------------------------------------
+    Total                      2.803ns (0.955ns logic, 1.848ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 34 / 34
+-------------------------------------------------------------------------
+Offset:              3.245ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       Motor_Encoder/CD/Counter_15 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RST to Motor_Encoder/CD/Counter_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            57   1.222   1.593  RST_IBUF (RST_IBUF)
+     FDC:CLR                   0.430          Motor_Encoder/CD/Counter_0
+    ----------------------------------------
+    Total                      3.245ns (1.652ns logic, 1.593ns route)
+                                       (50.9% logic, 49.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'E'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.253ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       Motor_Encoder/Count_val_7 (FF)
+  Destination Clock: E rising
+
+  Data Path: RST to Motor_Encoder/Count_val_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            57   1.222   1.594  RST_IBUF (RST_IBUF)
+     LUT2:I1->O            8   0.205   0.802  Motor_Encoder/en_RST_OR_47_o1 (Motor_Encoder/en_RST_OR_47_o)
+     FDC:CLR                   0.430          Motor_Encoder/Count_val_0
+    ----------------------------------------
+    Total                      4.253ns (1.857ns logic, 2.396ns route)
+                                       (43.7% logic, 56.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Motor_Encoder/CD/OUT'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              3.922ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       Motor_Encoder/en (FF)
+  Destination Clock: Motor_Encoder/CD/OUT rising
+
+  Data Path: RST to Motor_Encoder/en
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            57   1.222   1.593  RST_IBUF (RST_IBUF)
+     INV:I->O              1   0.206   0.579  Motor_Encoder/RST_inv1_INV_0 (Motor_Encoder/RST_inv)
+     FDE:CE                    0.322          Motor_Encoder/en
+    ----------------------------------------
+    Total                      3.922ns (1.750ns logic, 2.172ns route)
+                                       (44.6% logic, 55.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Comm/CD1/OUT'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              3.245ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       Comm/TX_register (FF)
+  Destination Clock: Comm/CD1/OUT rising
+
+  Data Path: RST to Comm/TX_register
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            57   1.222   1.593  RST_IBUF (RST_IBUF)
+     FDCE:CLR                  0.430          Comm/Count_0
+    ----------------------------------------
+    Total                      3.245ns (1.652ns logic, 1.593ns route)
+                                       (50.9% logic, 49.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Motor_Encoder/CD/OUT'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              3.701ns (Levels of Logic = 1)
+  Source:            Motor_Encoder/Out_reg_7 (FF)
+  Destination:       Count<7> (PAD)
+  Source Clock:      Motor_Encoder/CD/OUT rising
+
+  Data Path: Motor_Encoder/Out_reg_7 to Count<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.447   0.683  Motor_Encoder/Out_reg_7 (Motor_Encoder/Out_reg_7)
+     OBUF:I->O                 2.571          Count_7_OBUF (Count<7>)
+    ----------------------------------------
+    Total                      3.701ns (3.018ns logic, 0.683ns route)
+                                       (81.6% logic, 18.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Comm/CD1/OUT'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            Comm/TX_register (FF)
+  Destination:       TX (PAD)
+  Source Clock:      Comm/CD1/OUT rising
+
+  Data Path: Comm/TX_register to TX
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             1   0.447   0.579  Comm/TX_register (Comm/TX_register)
+     OBUF:I->O                 2.571          TX_OBUF (TX)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    4.089|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Comm/CD1/OUT
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+Comm/CD1/OUT        |    2.803|         |         |         |
+Motor_Encoder/CD/OUT|    2.569|         |         |         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock E
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+E                   |    1.837|         |         |         |
+Motor_Encoder/CD/OUT|    2.603|         |         |         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Motor_Encoder/CD/OUT
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+E                   |    2.156|         |         |         |
+Motor_Encoder/CD/OUT|    3.654|         |         |         |
+--------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.82 secs
+ 
+--> 
+
+Total memory usage is 296128 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

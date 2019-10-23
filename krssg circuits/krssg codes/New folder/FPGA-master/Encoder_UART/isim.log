@@ -1,0 +1,15 @@
+ISim log file
+Running: E:\Xilinx\Projects\Encoder_UART\Test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/Xilinx/Projects/Encoder_UART/Test_isim_beh.wdb 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "E:/Xilinx/Projects/UART_Transmitter/UART_Transmiter.v" Line 23.  For instance Comm/CD1/, width 16 of formal port IN is not equal to width 9 of actual variable IN. 
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run all
+Stopped at time : 37383645 ns : File "E:/Xilinx/Projects/Clock_Divider/Clock_Divider.v" Line 11
+# run all
+Stopped at time : 60035065 ns : File "E:/Xilinx/Projects/Encoder_UART/Test.v" Line 63

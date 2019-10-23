@@ -1,0 +1,65 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : MUX_4Channel_Schematic.vf
+// /___/   /\     Timestamp : 05/06/2018 02:22:58
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog E:/Xilinx/Projects/MUX_4Channel/MUX_4Channel_Schematic.vf -w E:/Xilinx/Projects/MUX_4Channel/MUX_4Channel_Schematic.sch
+//Design Name: MUX_4Channel_Schematic
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module MUX_4Channel_Schematic(INPUT_1, 
+                              INPUT_2, 
+                              INPUT_3, 
+                              INPUT_4, 
+                              SELECTOR_1, 
+                              SELECTOR_2, 
+                              OUTPUT_1);
+
+    input INPUT_1;
+    input INPUT_2;
+    input INPUT_3;
+    input INPUT_4;
+    input SELECTOR_1;
+    input SELECTOR_2;
+   output OUTPUT_1;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   
+   AND3  XLXI_1 (.I0(SELECTOR_2), 
+                .I1(SELECTOR_1), 
+                .I2(INPUT_1), 
+                .O(XLXN_1));
+   AND3B1  XLXI_2 (.I0(SELECTOR_2), 
+                  .I1(SELECTOR_1), 
+                  .I2(INPUT_2), 
+                  .O(XLXN_2));
+   AND3B2  XLXI_4 (.I0(SELECTOR_1), 
+                  .I1(SELECTOR_2), 
+                  .I2(INPUT_4), 
+                  .O(XLXN_4));
+   OR4  XLXI_5 (.I0(XLXN_4), 
+               .I1(XLXN_3), 
+               .I2(XLXN_2), 
+               .I3(XLXN_1), 
+               .O(OUTPUT_1));
+   AND3B1  XLXI_6 (.I0(SELECTOR_1), 
+                  .I1(SELECTOR_2), 
+                  .I2(INPUT_3), 
+                  .O(XLXN_3));
+endmodule

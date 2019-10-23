@@ -1,0 +1,11 @@
+ISim log file
+Running: E:\Xilinx\Projects\Motor_PWM\PWM_Test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/Xilinx/Projects/Motor_PWM/PWM_Test_isim_beh.wdb 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+WARNING: File "E:/Xilinx/Projects/Motor_PWM/PWM_Test.v" Line 28.  For instance PWM_Test/uut/, width 8 of formal port Input is not equal to width 4 of actual variable Input. 
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

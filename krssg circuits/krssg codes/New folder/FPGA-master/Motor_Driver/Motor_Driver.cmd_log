@@ -1,0 +1,55 @@
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Driver/Motor_Driver.xst" -ofn "E:/Xilinx/Projects/Motor_Driver/Motor_Driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Motor_Driver.ngc Motor_Driver.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Driver_map.ncd Motor_Driver.ngd Motor_Driver.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Driver_map.ncd Motor_Driver.ncd Motor_Driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Driver.twx Motor_Driver.ncd -o Motor_Driver.twr Motor_Driver.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Driver.ut Motor_Driver.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Driver/Motor_Driver.xst" -ofn "E:/Xilinx/Projects/Motor_Driver/Motor_Driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Driver.ngc Motor_Driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Driver_map.ncd Motor_Driver.ngd Motor_Driver.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Driver_map.ncd Motor_Driver.ncd Motor_Driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Driver.twx Motor_Driver.ncd -o Motor_Driver.twr Motor_Driver.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Driver.ut Motor_Driver.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Driver.ngc Motor_Driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Driver_map.ncd Motor_Driver.ngd Motor_Driver.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Driver_map.ncd Motor_Driver.ncd Motor_Driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Driver.twx Motor_Driver.ncd -o Motor_Driver.twr Motor_Driver.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Driver.ut Motor_Driver.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Driver/Motor_Driver.xst" -ofn "E:/Xilinx/Projects/Motor_Driver/Motor_Driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Driver.ngc Motor_Driver.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Driver.ngc Motor_Driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Driver_map.ncd Motor_Driver.ngd Motor_Driver.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Driver_map.ncd Motor_Driver.ncd Motor_Driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Driver.twx Motor_Driver.ncd -o Motor_Driver.twr Motor_Driver.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Driver.ut Motor_Driver.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Motor_Driver/Motor_Driver.xst" -ofn "E:/Xilinx/Projects/Motor_Driver/Motor_Driver.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Driver.ngc Motor_Driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Driver_map.ncd Motor_Driver.ngd Motor_Driver.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Driver_map.ncd Motor_Driver.ncd Motor_Driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Driver.twx Motor_Driver.ncd -o Motor_Driver.twr Motor_Driver.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Driver.ut Motor_Driver.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Driver.ngc Motor_Driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Driver_map.ncd Motor_Driver.ngd Motor_Driver.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Driver_map.ncd Motor_Driver.ncd Motor_Driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Driver.twx Motor_Driver.ncd -o Motor_Driver.twr Motor_Driver.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Driver.ut Motor_Driver.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Driver.ngc Motor_Driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Driver_map.ncd Motor_Driver.ngd Motor_Driver.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Driver_map.ncd Motor_Driver.ncd Motor_Driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Driver.twx Motor_Driver.ncd -o Motor_Driver.twr Motor_Driver.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Driver.ut Motor_Driver.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Driver.ngc Motor_Driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Driver_map.ncd Motor_Driver.ngd Motor_Driver.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Driver_map.ncd Motor_Driver.ncd Motor_Driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Driver.twx Motor_Driver.ncd -o Motor_Driver.twr Motor_Driver.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Driver.ut Motor_Driver.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Driver.ngc Motor_Driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Driver_map.ncd Motor_Driver.ngd Motor_Driver.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Driver_map.ncd Motor_Driver.ncd Motor_Driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Driver.twx Motor_Driver.ncd -o Motor_Driver.twr Motor_Driver.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Driver.ut Motor_Driver.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Motor_Driver.ngc Motor_Driver.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Motor_Driver_map.ncd Motor_Driver.ngd Motor_Driver.pcf 
+par -w -intstyle ise -ol high -mt off Motor_Driver_map.ncd Motor_Driver.ncd Motor_Driver.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Motor_Driver.twx Motor_Driver.ncd -o Motor_Driver.twr Motor_Driver.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Motor_Driver.ut Motor_Driver.ncd 

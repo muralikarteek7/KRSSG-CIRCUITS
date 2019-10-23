@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM/PWM.xst" -ofn "E:/Xilinx/Projects/PWM/PWM.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM/PWM.xst" -ofn "E:/Xilinx/Projects/PWM/PWM.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM/PWM.xst" -ofn "E:/Xilinx/Projects/PWM/PWM.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM/PWM.xst" -ofn "E:/Xilinx/Projects/PWM/PWM.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM/PWM.xst" -ofn "E:/Xilinx/Projects/PWM/PWM.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM/PWM.xst" -ofn "E:/Xilinx/Projects/PWM/PWM.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM/PWM.xst" -ofn "E:/Xilinx/Projects/PWM/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf 
+bitgen -intstyle ise -f PWM.ut PWM.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCf_MIMAS_MODuLE.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM/PWM.xst" -ofn "E:/Xilinx/Projects/PWM/PWM.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM/PWM.xst" -ofn "E:/Xilinx/Projects/PWM/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCf_MIMAS_MODuLE.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM/PWM.xst" -ofn "E:/Xilinx/Projects/PWM/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCf_MIMAS_MODuLE.ucf -p xc6slx9-tqg144-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCf_MIMAS_MODuLE.ucf 
+bitgen -intstyle ise -f PWM.ut PWM.ncd 

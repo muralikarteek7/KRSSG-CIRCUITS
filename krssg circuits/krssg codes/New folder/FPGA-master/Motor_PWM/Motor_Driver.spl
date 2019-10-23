@@ -1,0 +1,10 @@
+[Inputs]
+=H[2:0]=
+[Outputs]
+=A[1:0]=
+=B[1:0]=
+=C[1:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Motor_Driver
+

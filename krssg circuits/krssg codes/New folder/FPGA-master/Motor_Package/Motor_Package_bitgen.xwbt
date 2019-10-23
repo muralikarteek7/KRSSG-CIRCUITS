@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\Xilinx\Projects\Motor_Package\Motor_Package.ncd
+OUTFILE=E:\Xilinx\Projects\Motor_Package\Motor_Package.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=E:\Xilinx\Projects\Motor_Package
+LICENSE=WebPack
+USER_INFO=__0_0_0

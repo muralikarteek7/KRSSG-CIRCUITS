@@ -1,0 +1,3 @@
+verilog work "MUX_4Channel_Schematic.vf"
+verilog work "Simulation_MUX.v"
+verilog work "E:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

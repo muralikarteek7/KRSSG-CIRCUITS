@@ -1,0 +1,2 @@
+verilog isim_temp "netgen/par/Clock_Divider_timesim.v"
+verilog isim_temp "Test.v"

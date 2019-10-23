@@ -1,0 +1,7 @@
+verilog work "../Clock_Divider/Clock_Divider.v"
+verilog work "../UART_Transmitter/UART_Transmiter.v"
+verilog work "../Encoder/Encoder.v"
+vhdl work "../UART_Receiver/UART_Receiver.vhd"
+verilog work "../Motor_PWM/Motor_PWM.v"
+verilog work "../Encoder_UART/Encoder_UART.v"
+verilog work "Motor_Package.v"

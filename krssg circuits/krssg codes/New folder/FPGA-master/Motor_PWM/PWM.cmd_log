@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/Xilinx/Projects/PWM/PWM.v -lang verilog -prj Motor_PWM -o PWM.spl -module PWM -template E:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 PWM.spl E:/Xilinx/Projects/Motor_PWM/PWM.sym 

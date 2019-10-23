@@ -1,0 +1,421 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Schematic.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Schematic.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Schematic"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-csg324
+
+---- Source Options
+Top Module Name                    : Schematic
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\Xilinx\Projects\PWM_3-Bit\Schematic.vf" into library work
+Parsing module <FJKCE_HXILINX_Schematic>.
+Parsing module <CB4CE_HXILINX_Schematic>.
+Parsing module <Schematic>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Schematic>.
+
+Elaborating module <CB4CE_HXILINX_Schematic>.
+WARNING:HDLCompiler:413 - "E:\Xilinx\Projects\PWM_3-Bit\Schematic.vf" Line 85: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <XOR2>.
+
+Elaborating module <NOR4>.
+
+Elaborating module <FJKCE_HXILINX_Schematic>.
+
+Elaborating module <VCC>.
+
+Elaborating module <GND>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Schematic>.
+    Related source file is "E:\Xilinx\Projects\PWM_3-Bit\Schematic.vf".
+    Set property "HU_SET = XLXI_1_0" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_12_1" for instance <XLXI_12>.
+INFO:Xst:3210 - "E:\Xilinx\Projects\PWM_3-Bit\Schematic.vf" line 125: Output port <CEO> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Xilinx\Projects\PWM_3-Bit\Schematic.vf" line 125: Output port <TC> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <Schematic> synthesized.
+
+Synthesizing Unit <CB4CE_HXILINX_Schematic>.
+    Related source file is "E:\Xilinx\Projects\PWM_3-Bit\Schematic.vf".
+    Found 1-bit register for signal <Q1>.
+    Found 1-bit register for signal <Q2>.
+    Found 1-bit register for signal <Q3>.
+    Found 1-bit register for signal <Q0>.
+    Found 4-bit adder for signal <Q3_GND_2_o_add_0_OUT> created at line 85.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+Unit <CB4CE_HXILINX_Schematic> synthesized.
+
+Synthesizing Unit <FJKCE_HXILINX_Schematic>.
+    Related source file is "E:\Xilinx\Projects\PWM_3-Bit\Schematic.vf".
+        INIT = 1'b0
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <FJKCE_HXILINX_Schematic> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 5
+ 1-bit register                                        : 5
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Schematic> ...
+
+Optimizing unit <CB4CE_HXILINX_Schematic> ...
+
+Optimizing unit <FJKCE_HXILINX_Schematic> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Schematic, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Schematic.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 12
+#      GND                         : 1
+#      INV                         : 2
+#      LUT2                        : 1
+#      LUT3                        : 1
+#      LUT4                        : 1
+#      VCC                         : 1
+#      XOR2                        : 5
+# FlipFlops/Latches                : 5
+#      FDCE                        : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 5
+#      IBUF                        : 4
+#      OBUF                        : 1
+# Logical                          : 2
+#      NOR4                        : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               5  out of  11440     0%  
+ Number of Slice LUTs:                    5  out of   5720     0%  
+    Number used as Logic:                 5  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     10
+   Number with an unused Flip Flop:       5  out of     10    50%  
+   Number with an unused LUT:             5  out of     10    50%  
+   Number of fully used LUT-FF pairs:     0  out of     10     0%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    200     3%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clock                              | BUFGP                  | 5     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.953ns (Maximum Frequency: 201.886MHz)
+   Minimum input arrival time before clock: 5.563ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock'
+  Clock period: 4.953ns (frequency: 201.886MHz)
+  Total number of paths / destination ports: 19 / 6
+-------------------------------------------------------------------------
+Delay:               4.953ns (Levels of Logic = 4)
+  Source:            XLXI_1/Q0 (FF)
+  Destination:       XLXI_12/Q (FF)
+  Source Clock:      Clock rising
+  Destination Clock: Clock rising
+
+  Data Path: XLXI_1/Q0 to XLXI_12/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.447   1.109  Q0 (Q0)
+     end scope: 'XLXI_1:Q0'
+     XOR2:I0->O            1   0.203   0.808  XLXI_2 (XLXN_22)
+     NOR4:I3->O            1   0.339   0.924  XLXI_10 (XLXN_26)
+     XOR2:I1->O            1   0.223   0.579  XLXI_6 (XLXN_31)
+     begin scope: 'XLXI_12:CE'
+     FDCE:CE                   0.322          Q
+    ----------------------------------------
+    Total                      4.953ns (1.534ns logic, 3.419ns route)
+                                       (31.0% logic, 69.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock'
+  Total number of paths / destination ports: 4 / 1
+-------------------------------------------------------------------------
+Offset:              5.563ns (Levels of Logic = 5)
+  Source:            INPUT_4 (PAD)
+  Destination:       XLXI_12/Q (FF)
+  Destination Clock: Clock rising
+
+  Data Path: INPUT_4 to XLXI_12/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.944  INPUT_4_IBUF (INPUT_4_IBUF)
+     XOR2:I0->O            1   0.203   0.944  XLXI_9 (XLXN_25)
+     NOR4:I0->O            1   0.203   0.924  XLXI_10 (XLXN_26)
+     XOR2:I1->O            1   0.223   0.579  XLXI_6 (XLXN_31)
+     begin scope: 'XLXI_12:CE'
+     FDCE:CE                   0.322          Q
+    ----------------------------------------
+    Total                      5.563ns (2.173ns logic, 3.390ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 2)
+  Source:            XLXI_12/Q (FF)
+  Destination:       OUTPUT_1 (PAD)
+  Source Clock:      Clock rising
+
+  Data Path: XLXI_12/Q to OUTPUT_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.447   0.616  Q (Q)
+     end scope: 'XLXI_12:Q'
+     OBUF:I->O                 2.571          OUTPUT_1_OBUF (OUTPUT_1)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clock          |    4.953|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.20 secs
+ 
+--> 
+
+Total memory usage is 295316 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

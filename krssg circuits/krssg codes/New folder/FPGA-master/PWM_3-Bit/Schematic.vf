@@ -1,0 +1,170 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Schematic.vf
+// /___/   /\     Timestamp : 05/10/2018 00:51:08
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/Xilinx/Projects/PWM_3-Bit/Schematic.vf -w E:/Xilinx/Projects/PWM_3-Bit/Schematic.sch
+//Design Name: Schematic
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKCE_HXILINX_Schematic(Q, C, CE, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(CE)
+        begin
+          if(!J)
+          begin
+            if(K)
+            Q <= 1'b0;
+          end
+          else
+          begin
+            if(!K)
+            Q <= 1'b1;
+            else 
+            Q <= !Q;
+          end
+        end
+     end
+   
+endmodule
+`timescale 100 ps / 10 ps
+
+module CB4CE_HXILINX_Schematic(CEO, Q0, Q1, Q2, Q3, TC, C, CE, CLR);
+   
+   localparam TERMINAL_COUNT = 4'b1111;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             Q2;
+   output             Q3;
+   output             TC;
+
+   input 	      C;	
+   input 	      CE;	
+   input 	      CLR;	
+   
+   reg                Q0;
+   reg                Q1;
+   reg                Q2;
+   reg                Q3;
+   
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  {Q3, Q2, Q1, Q0} <= 4'b0000;
+	else if (CE)
+	  {Q3, Q2, Q1,Q0} <= {Q3, Q2, Q1,Q0} + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = ({Q3, Q2, Q1, Q0} == TERMINAL_COUNT);
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Schematic(Clock, 
+                 INPUT_1, 
+                 INPUT_2, 
+                 INPUT_3, 
+                 INPUT_4, 
+                 OUTPUT_1);
+
+    input Clock;
+    input INPUT_1;
+    input INPUT_2;
+    input INPUT_3;
+    input INPUT_4;
+   output OUTPUT_1;
+   
+   wire CE;
+   wire CLR_CNTR;
+   wire CLR_JK;
+   wire JK;
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_15;
+   wire XLXN_18;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_31;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   CB4CE_HXILINX_Schematic  XLXI_1 (.C(Clock), 
+                                   .CE(CE), 
+                                   .CLR(CLR_CNTR), 
+                                   .CEO(), 
+                                   .Q0(XLXN_1), 
+                                   .Q1(XLXN_2), 
+                                   .Q2(XLXN_18), 
+                                   .Q3(XLXN_15), 
+                                   .TC());
+   XOR2  XLXI_2 (.I0(XLXN_1), 
+                .I1(INPUT_1), 
+                .O(XLXN_22));
+   XOR2  XLXI_3 (.I0(XLXN_2), 
+                .I1(INPUT_2), 
+                .O(XLXN_23));
+   XOR2  XLXI_4 (.I0(XLXN_18), 
+                .I1(INPUT_3), 
+                .O(XLXN_24));
+   XOR2  XLXI_6 (.I0(XLXN_27), 
+                .I1(XLXN_26), 
+                .O(XLXN_31));
+   XOR2  XLXI_9 (.I0(INPUT_4), 
+                .I1(XLXN_15), 
+                .O(XLXN_25));
+   NOR4  XLXI_10 (.I0(XLXN_25), 
+                 .I1(XLXN_24), 
+                 .I2(XLXN_23), 
+                 .I3(XLXN_22), 
+                 .O(XLXN_26));
+   NOR4  XLXI_11 (.I0(XLXN_1), 
+                 .I1(XLXN_2), 
+                 .I2(XLXN_18), 
+                 .I3(XLXN_15), 
+                 .O(XLXN_27));
+   (* HU_SET = "XLXI_12_1" *) 
+   FJKCE_HXILINX_Schematic  XLXI_12 (.C(Clock), 
+                                    .CE(XLXN_31), 
+                                    .CLR(CLR_JK), 
+                                    .J(JK), 
+                                    .K(JK), 
+                                    .Q(OUTPUT_1));
+   VCC  XLXI_13 (.P(CE));
+   VCC  XLXI_14 (.P(JK));
+   GND  XLXI_15 (.G(CLR_JK));
+   GND  XLXI_16 (.G(CLR_CNTR));
+endmodule

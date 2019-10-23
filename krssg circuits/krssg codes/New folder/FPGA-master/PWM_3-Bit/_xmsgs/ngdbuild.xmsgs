@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;CLR_CNTR&quot;                LOC = C17     |&gt; [ucf.ucf(71)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;CLR_CNTR&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;CLR_CNTR&quot;                LOC = C17     |&gt; [ucf.ucf(71)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;IOSTANDARD = LVCMOS33 |&gt; [ucf.ucf(71)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;CLR_CNTR&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;DRIVE = 8 |&gt; [ucf.ucf(71)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;CLR_CNTR&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;SLEW = FAST |&gt; [ucf.ucf(71)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;CLR_CNTR&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="0" >The Period constraint &lt;PERIOD = 100MHz ;&gt; [ucf.ucf(1)], is specified using the Net Period method which is not recommended. Please use the Timespec PERIOD method.
+</msg>
+
+</messages>
+

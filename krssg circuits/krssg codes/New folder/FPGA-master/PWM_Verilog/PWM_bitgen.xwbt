@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\Xilinx\Projects\PWM_Verilog\PWM.ncd
+OUTFILE=E:\Xilinx\Projects\PWM_Verilog\PWM.bit
+FAMILY=Spartan6
+PART=xc6slx9-3csg324
+WORKINGDIR=E:\Xilinx\Projects\PWM_Verilog
+LICENSE=WebPack
+USER_INFO=__0_0_0

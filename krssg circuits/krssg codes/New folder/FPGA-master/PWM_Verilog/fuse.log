@@ -1,0 +1,31 @@
+Running: E:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib simprims_ver -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/Xilinx/Projects/PWM_Verilog/Test_Fixture_isim_par.exe -prj E:/Xilinx/Projects/PWM_Verilog/Test_Fixture_par.prj work.Test_Fixture work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/Xilinx/Projects/PWM_Verilog/netgen/par/PWM_timesim.v" into library work
+Analyzing Verilog file "E:/Xilinx/Projects/PWM_Verilog/Test_Fixture.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 193920 KB
+Fuse CPU Usage: 515 ms
+Compiling module X_PU
+Compiling module X_IPAD
+Compiling module X_BUF
+Compiling module X_OPAD
+Compiling module X_OBUF
+Compiling module X_CKBUF
+Compiling module X_LUT6(INIT=64'b0101111100000101...
+Compiling module ffsrce
+Compiling module X_FF
+Compiling module X_ONE
+Compiling module X_ZERO
+Compiling module PWM
+Compiling module Test_Fixture
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 34 Verilog Units
+Built simulation executable E:/Xilinx/Projects/PWM_Verilog/Test_Fixture_isim_par.exe
+Fuse Memory Usage: 204716 KB
+Fuse CPU Usage: 905 ms

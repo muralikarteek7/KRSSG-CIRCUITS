@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun May 20 13:52:31 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Input<0>" LOCATE = SITE "P120" LEVEL 1;
+COMP "Input<1>" LOCATE = SITE "P121" LEVEL 1;
+COMP "Input<2>" LOCATE = SITE "P123" LEVEL 1;
+COMP "Input<3>" LOCATE = SITE "P124" LEVEL 1;
+COMP "OUT" LOCATE = SITE "P115" LEVEL 1;
+COMP "RST" LOCATE = SITE "P35" LEVEL 1;
+COMP "CLK" LOCATE = SITE "P126" LEVEL 1;
+SCHEMATIC END;
+

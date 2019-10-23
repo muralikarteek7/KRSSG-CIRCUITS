@@ -1,0 +1,2 @@
+verilog work "netgen/par/Motor_PWM_timesim.v"
+verilog work "Test.v"

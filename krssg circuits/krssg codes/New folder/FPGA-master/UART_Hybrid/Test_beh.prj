@@ -1,0 +1,6 @@
+verilog work "../Clock_Divider/Clock_Divider.v"
+verilog work "../UART_Transmitter/UART_Transmiter.v"
+vhdl work "../UART_Receiver/UART_Receiver.vhd"
+verilog work "UART.v"
+verilog work "Test.v"
+verilog work "E:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

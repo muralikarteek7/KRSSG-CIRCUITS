@@ -1,0 +1,20 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Aug 16 22:37:46 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Count<7>" LOCATE = SITE "P111" LEVEL 1;
+COMP "A" LOCATE = SITE "P35" LEVEL 1;
+PIN A_pin<0> = BEL "A" PINNAME PAD;
+PIN "A_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "RST" LOCATE = SITE "P124" LEVEL 1;
+COMP "Count<0>" LOCATE = SITE "P119" LEVEL 1;
+COMP "Count<1>" LOCATE = SITE "P118" LEVEL 1;
+COMP "CLK" LOCATE = SITE "P126" LEVEL 1;
+COMP "Count<2>" LOCATE = SITE "P117" LEVEL 1;
+COMP "Count<3>" LOCATE = SITE "P116" LEVEL 1;
+COMP "Count<4>" LOCATE = SITE "P115" LEVEL 1;
+COMP "Count<5>" LOCATE = SITE "P114" LEVEL 1;
+COMP "Count<6>" LOCATE = SITE "P112" LEVEL 1;
+SCHEMATIC END;
+

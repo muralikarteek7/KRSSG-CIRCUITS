@@ -1,0 +1,497 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: Motor_PWM.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Motor_PWM.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Motor_PWM"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : Motor_PWM
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\Xilinx\Projects\Clock_Divider\Clock_Divider.v" into library work
+Parsing module <Clock_Divider>.
+Analyzing Verilog file "E:\Xilinx\Projects\Motor_PWM\Motor_PWM.v" into library work
+Parsing module <PWM>.
+Parsing module <Motor_PWM>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Motor_PWM>.
+
+Elaborating module <PWM>.
+WARNING:HDLCompiler:872 - "E:\Xilinx\Projects\Motor_PWM\Motor_PWM.v" Line 24: Using initial value of IN since it is never assigned
+
+Elaborating module <Clock_Divider>.
+WARNING:HDLCompiler:413 - "E:\Xilinx\Projects\Clock_Divider\Clock_Divider.v" Line 19: Result of 17-bit expression is truncated to fit in 16-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Motor_PWM>.
+    Related source file is "E:\Xilinx\Projects\Motor_PWM\Motor_PWM.v".
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <Motor_PWM> synthesized.
+
+Synthesizing Unit <PWM>.
+    Related source file is "E:\Xilinx\Projects\Motor_PWM\Motor_PWM.v".
+    Found 8-bit register for signal <Counter_val>.
+    Found 1-bit register for signal <output_val>.
+    Found 8-bit adder for signal <Counter_val[7]_GND_2_o_add_1_OUT> created at line 48.
+    Found 8-bit comparator greater for signal <Counter_val[7]_Input[7]_LessThan_1_o> created at line 40
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <PWM> synthesized.
+
+Synthesizing Unit <Clock_Divider>.
+    Related source file is "E:\Xilinx\Projects\Clock_Divider\Clock_Divider.v".
+    Found 1-bit register for signal <OUT>.
+    Found 16-bit register for signal <Counter>.
+    Found 16-bit adder for signal <Counter[15]_GND_3_o_add_0_OUT> created at line 19.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Clock_Divider> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 16-bit adder                                          : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 16-bit register                                       : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 4
+ 16-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Clock_Divider>.
+The following registers are absorbed into counter <Counter>: 1 register on signal <Counter>.
+Unit <Clock_Divider> synthesized (advanced).
+
+Synthesizing (advanced) Unit <PWM>.
+The following registers are absorbed into counter <Counter_val>: 1 register on signal <Counter_val>.
+Unit <PWM> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 16-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# Comparators                                          : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 3
+ 2-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Motor_PWM> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Motor_PWM, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 26
+ Flip-Flops                                            : 26
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Motor_PWM.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 105
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 22
+#      LUT2                        : 16
+#      LUT3                        : 3
+#      LUT4                        : 5
+#      LUT5                        : 1
+#      LUT6                        : 7
+#      MUXCY                       : 22
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 26
+#      FDC                         : 24
+#      FDCE                        : 1
+#      FDE                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 26
+#      IBUF                        : 12
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              26  out of  11440     0%  
+ Number of Slice LUTs:                   57  out of   5720     0%  
+    Number used as Logic:                57  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     57
+   Number with an unused Flip Flop:      31  out of     57    54%  
+   Number with an unused LUT:             0  out of     57     0%  
+   Number of fully used LUT-FF pairs:    26  out of     57    45%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          27
+ Number of bonded IOBs:                  27  out of    102    26%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+pwm/CD/OUT                         | NONE(pwm/output_val)   | 9     |
+CLK                                | BUFGP                  | 17    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.867ns (Maximum Frequency: 258.575MHz)
+   Minimum input arrival time before clock: 3.615ns
+   Maximum output required time after clock: 4.792ns
+   Maximum combinational path delay: 5.520ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'pwm/CD/OUT'
+  Clock period: 2.860ns (frequency: 349.638MHz)
+  Total number of paths / destination ports: 49 / 9
+-------------------------------------------------------------------------
+Delay:               2.860ns (Levels of Logic = 2)
+  Source:            pwm/Counter_val_2 (FF)
+  Destination:       pwm/output_val (FF)
+  Source Clock:      pwm/CD/OUT rising
+  Destination Clock: pwm/CD/OUT rising
+
+  Data Path: pwm/Counter_val_2 to pwm/output_val
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.981  pwm/Counter_val_2 (pwm/Counter_val_2)
+     LUT6:I0->O            1   0.203   0.924  pwm/Counter_val[7]_Input[7]_LessThan_1_o2 (pwm/Counter_val[7]_Input[7]_LessThan_1_o1)
+     LUT5:I0->O            1   0.203   0.000  pwm/Counter_val[7]_Input[7]_LessThan_1_o21 (pwm/Counter_val[7]_Input[7]_LessThan_1_o)
+     FDE:D                     0.102          pwm/output_val
+    ----------------------------------------
+    Total                      2.860ns (0.955ns logic, 1.905ns route)
+                                       (33.4% logic, 66.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 3.867ns (frequency: 258.575MHz)
+  Total number of paths / destination ports: 409 / 18
+-------------------------------------------------------------------------
+Delay:               3.867ns (Levels of Logic = 3)
+  Source:            pwm/CD/Counter_7 (FF)
+  Destination:       pwm/CD/Counter_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: pwm/CD/Counter_7 to pwm/CD/Counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.981  pwm/CD/Counter_7 (pwm/CD/Counter_7)
+     LUT6:I0->O            2   0.203   0.721  pwm/CD/Counter[15]_IN[15]_equal_2_o<15>2 (pwm/CD/Counter[15]_IN[15]_equal_2_o<15>1)
+     LUT6:I4->O           16   0.203   1.005  pwm/CD/Counter[15]_IN[15]_equal_2_o<15>3 (pwm/CD/Counter[15]_IN[15]_equal_2_o)
+     LUT2:I1->O            1   0.205   0.000  pwm/CD/Mcount_Counter_eqn_01 (pwm/CD/Mcount_Counter_eqn_0)
+     FDC:D                     0.102          pwm/CD/Counter_0
+    ----------------------------------------
+    Total                      3.867ns (1.160ns logic, 2.707ns route)
+                                       (30.0% logic, 70.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'pwm/CD/OUT'
+  Total number of paths / destination ports: 22 / 10
+-------------------------------------------------------------------------
+Offset:              3.615ns (Levels of Logic = 3)
+  Source:            Input<2> (PAD)
+  Destination:       pwm/output_val (FF)
+  Destination Clock: pwm/CD/OUT rising
+
+  Data Path: Input<2> to pwm/output_val
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.961  Input_2_IBUF (PWM_In_2_OBUF)
+     LUT6:I1->O            1   0.203   0.924  pwm/Counter_val[7]_Input[7]_LessThan_1_o2 (pwm/Counter_val[7]_Input[7]_LessThan_1_o1)
+     LUT5:I0->O            1   0.203   0.000  pwm/Counter_val[7]_Input[7]_LessThan_1_o21 (pwm/Counter_val[7]_Input[7]_LessThan_1_o)
+     FDE:D                     0.102          pwm/output_val
+    ----------------------------------------
+    Total                      3.615ns (1.730ns logic, 1.885ns route)
+                                       (47.9% logic, 52.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              2.858ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       pwm/CD/OUT (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RST to pwm/CD/OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            26   1.222   1.206  RST_IBUF (RST_IBUF)
+     FDCE:CLR                  0.430          pwm/CD/OUT
+    ----------------------------------------
+    Total                      2.858ns (1.652ns logic, 1.206ns route)
+                                       (57.8% logic, 42.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'pwm/CD/OUT'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              4.792ns (Levels of Logic = 2)
+  Source:            pwm/output_val (FF)
+  Destination:       A<0> (PAD)
+  Source Clock:      pwm/CD/OUT rising
+
+  Data Path: pwm/output_val to A<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.447   0.992  pwm/output_val (pwm/output_val)
+     LUT4:I0->O            1   0.203   0.579  Mmux_C11 (C_0_OBUF)
+     OBUF:I->O                 2.571          C_0_OBUF (C<0>)
+    ----------------------------------------
+    Total                      4.792ns (3.221ns logic, 1.571ns route)
+                                       (67.2% logic, 32.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 23 / 14
+-------------------------------------------------------------------------
+Delay:               5.520ns (Levels of Logic = 3)
+  Source:            H<2> (PAD)
+  Destination:       A<0> (PAD)
+
+  Data Path: H<2> to A<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.222   0.943  H_2_IBUF (H_2_IBUF)
+     LUT4:I1->O            1   0.205   0.579  Mmux_A11 (A_0_OBUF)
+     OBUF:I->O                 2.571          A_0_OBUF (A<0>)
+    ----------------------------------------
+    Total                      5.520ns (3.998ns logic, 1.522ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    3.867|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock pwm/CD/OUT
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pwm/CD/OUT     |    2.860|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.74 secs
+ 
+--> 
+
+Total memory usage is 296340 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

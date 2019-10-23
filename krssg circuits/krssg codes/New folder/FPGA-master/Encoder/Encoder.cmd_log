@@ -1,0 +1,118 @@
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf 
+netgen -intstyle ise -s 3  -pcf Encoder.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim Encoder.ncd Encoder_timesim.v 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+netgen -intstyle ise -s 3  -pcf Encoder.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim Encoder.ncd Encoder_timesim.v 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf 
+netgen -intstyle ise -s 3  -pcf Encoder.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim Encoder.ncd Encoder_timesim.v 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/Encoder/Encoder.xst" -ofn "E:/Xilinx/Projects/Encoder/Encoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-tqg144-3 Encoder.ngc Encoder.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Encoder_map.ncd Encoder.ngd Encoder.pcf 
+par -w -intstyle ise -ol high -mt off Encoder_map.ncd Encoder.ncd Encoder.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Encoder.twx Encoder.ncd -o Encoder.twr Encoder.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f Encoder.ut Encoder.ncd 

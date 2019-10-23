@@ -1,0 +1,102 @@
+vhdtdtfi -lib work E:/Xilinx/Projects/PWM_Verilog/PWM.v -lang verilog -prj PWM_Verilog -o PWM.spl -module PWM -template E:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 PWM.spl E:/Xilinx/Projects/PWM_Verilog/PWM.sym 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf 
+bitgen -intstyle ise -f PWM.ut PWM.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf 
+bitgen -intstyle ise -f PWM.ut PWM.ncd 
+bitgen -intstyle ise -f PWM.ut PWM.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f PWM.ut PWM.ncd 
+bitgen -intstyle ise -f PWM.ut PWM.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f PWM.ut PWM.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f PWM.ut PWM.ncd 
+netgen -intstyle ise -s 3  -pcf PWM.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim PWM.ncd PWM_timesim.v 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f PWM.ut PWM.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+bitgen -intstyle ise -f PWM.ut PWM.ncd 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+netgen -intstyle ise -s 3  -pcf PWM.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim PWM.ncd PWM_timesim.v 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+netgen -intstyle ise -s 3  -pcf PWM.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim PWM.ncd PWM_timesim.v 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+netgen -intstyle ise -s 3  -pcf PWM.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim PWM.ncd PWM_timesim.v 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+netgen -intstyle ise -s 3  -pcf PWM.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim PWM.ncd PWM_timesim.v 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+netgen -intstyle ise -s 3  -pcf PWM.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim PWM.ncd PWM_timesim.v 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+netgen -intstyle ise -s 3  -pcf PWM.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim PWM.ncd PWM_timesim.v 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+netgen -intstyle ise -s 3  -pcf PWM.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim PWM.ncd PWM_timesim.v 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+netgen -intstyle ise -s 3  -pcf PWM.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim PWM.ncd PWM_timesim.v 
+xst -intstyle ise -ifn "E:/Xilinx/Projects/PWM_Verilog/PWM.xst" -ofn "E:/Xilinx/Projects/PWM_Verilog/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc UCF.ucf -p xc6slx9-csg324-3 PWM.ngc PWM.ngd  
+map -intstyle ise -p xc6slx9-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o PWM_map.ncd PWM.ngd PWM.pcf 
+par -w -intstyle ise -ol high -mt off PWM_map.ncd PWM.ncd PWM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml PWM.twx PWM.ncd -o PWM.twr PWM.pcf -ucf UCF.ucf 
+netgen -intstyle ise -s 3  -pcf PWM.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim PWM.ncd PWM_timesim.v 

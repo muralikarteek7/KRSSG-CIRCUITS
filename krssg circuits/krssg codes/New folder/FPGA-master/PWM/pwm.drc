@@ -1,0 +1,11 @@
+Release 14.7 Drc P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Sun May 20 13:53:02 2018
+
+drc -z PWM.ncd PWM.pcf
+
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp OUT_PULLUP
+   is set but the tri state is not configured. 
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

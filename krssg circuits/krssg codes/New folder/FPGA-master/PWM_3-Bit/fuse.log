@@ -1,0 +1,15 @@
+Running: E:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/Xilinx/Projects/PWM_3-Bit/Schematic_Schematic_sch_tb_isim_beh.exe -prj E:/Xilinx/Projects/PWM_3-Bit/Schematic_Schematic_sch_tb_beh.prj work.Schematic_Schematic_sch_tb work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/Xilinx/Projects/PWM_3-Bit/Schematic.vf" into library work
+Analyzing Verilog file "E:/Xilinx/Projects/PWM_3-Bit/Simulation.v" into library work
+Analyzing Verilog file "E:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:267 - "E:/Xilinx/Projects/PWM_3-Bit/Simulation.v" Line 24: Cannot find port CLR_JK on this module
+ERROR:HDLCompiler:25 - "E:/Xilinx/Projects/PWM_3-Bit/Simulation.v" Line 25: Module <Schematic> does not have a port named <JK>.
+ERROR:HDLCompiler:25 - "E:/Xilinx/Projects/PWM_3-Bit/Simulation.v" Line 31: Module <Schematic> does not have a port named <CE>.
+ERROR:HDLCompiler:25 - "E:/Xilinx/Projects/PWM_3-Bit/Simulation.v" Line 32: Module <Schematic> does not have a port named <CLR_CNTR>.
+ERROR:HDLCompiler:25 - "E:/Xilinx/Projects/PWM_3-Bit/Simulation.v" Line 34: Module <Schematic> does not have a port named <CLR_JK>.
+ERROR:Simulator:778 - Static elaboration of top level Verilog design unit(s) in library work failed

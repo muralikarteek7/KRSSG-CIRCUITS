@@ -1,0 +1,6 @@
+vhdtdtfi -lib work E:/Xilinx/Projects/Motor_Driver/Motor_Driver.v -lang verilog -prj Motor_PWM -o Motor_Driver.spl -module Motor_Driver -template E:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 Motor_Driver.spl E:/Xilinx/Projects/Motor_PWM/Motor_Driver.sym 
+vhdtdtfi -lib work E:/Xilinx/Projects/Motor_Driver/Motor_Driver.v -lang verilog -prj Motor_PWM -o Motor_Driver.spl -module Motor_Driver -template E:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 Motor_Driver.spl E:/Xilinx/Projects/Motor_PWM/Motor_Driver.sym 
+vhdtdtfi -lib work E:/Xilinx/Projects/Motor_Driver/Motor_Driver.v -lang verilog -prj Motor_PWM -o Motor_Driver.spl -module Motor_Driver -template E:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 Motor_Driver.spl E:/Xilinx/Projects/Motor_PWM/Motor_Driver.sym 

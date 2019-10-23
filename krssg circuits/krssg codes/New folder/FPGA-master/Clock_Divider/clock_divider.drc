@@ -1,0 +1,12 @@
+Release 14.7 Drc P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Aug 09 15:11:00 2018
+
+drc -z Clock_Divider.ncd Clock_Divider.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net Counter[8]_IN[8]_equal_1_o
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"E:\Xilinx\Projects\Encoder\Encoder.v" Line 25: Using initial value of <arg fmt="%s" index="1">cd</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Xilinx\Projects\Clock_Divider\Clock_Divider.v" Line 19: Result of <arg fmt="%d" index="1">17</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Xilinx\Projects\Encoder\Encoder.v" Line 46: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\Xilinx\Projects\Encoder\Encoder.v" Line 54: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"E:\Xilinx\Projects\UART_Transmitter\UART_Transmiter.v" Line 23: Using initial value of <arg fmt="%s" index="1">IN</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"E:\Xilinx\Projects\UART_Transmitter\UART_Transmiter.v" Line 26: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">IN</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">9</arg>-bit.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

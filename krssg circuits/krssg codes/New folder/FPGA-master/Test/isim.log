@@ -1,0 +1,12 @@
+ISim log file
+Running: E:\Xilinx\Projects\Test\Test_Fix_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb E:/Xilinx/Projects/Test/Test_Fix_isim_beh.wdb 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run all
+Stopped at time : 34447655 ns : File "E:/Xilinx/Projects/Test/Test.v" Line 25

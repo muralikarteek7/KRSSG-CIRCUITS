@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu May 10 00:51:27 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "INPUT_1" LOCATE = SITE "F17" LEVEL 1;
+COMP "INPUT_2" LOCATE = SITE "F18" LEVEL 1;
+COMP "INPUT_3" LOCATE = SITE "E16" LEVEL 1;
+COMP "INPUT_4" LOCATE = SITE "E18" LEVEL 1;
+COMP "Clock" LOCATE = SITE "V10" LEVEL 1;
+COMP "OUTPUT_1" LOCATE = SITE "P15" LEVEL 1;
+NET "Clock_BUFGP/IBUFG" PERIOD = 10 ns HIGH 50%;
+SCHEMATIC END;
+
